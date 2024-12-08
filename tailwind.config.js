@@ -42,6 +42,14 @@ export default {
       },
       transitionProperty: {
         background: 'background-position'
+      },
+      fontSize: {
+        '4xl': [
+          '2.5rem',
+          {
+            lineHeight: '3.5rem'
+          }
+        ]
       }
     }
   },
