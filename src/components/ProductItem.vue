@@ -6,8 +6,6 @@ import { productSchema } from '../model/serializers/products';
 
 const props = defineProps<{
   product: productSchema;
-  isLoading: boolean;
-  isError: Error | null;
 }>();
 
 const imgSrcset = computed((): string => {

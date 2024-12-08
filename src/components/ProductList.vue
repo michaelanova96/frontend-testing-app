@@ -27,7 +27,7 @@ defineEmits<{
     </div>
     <div v-else class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4">
       <div v-for="(product, index) in products" :key="product.id">
-        <ProductItem :product="product" :is-error="isError" :is-loading="isLoading" :is-first="index == 0" />
+        <ProductItem :product="product" :is-first="index == 0" />
       </div>
     </div>
   </div>
