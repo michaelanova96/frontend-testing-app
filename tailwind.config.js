@@ -50,6 +50,9 @@ export default {
             lineHeight: '3.5rem'
           }
         ]
+      },
+      scale: {
+        103: '1.03'
       }
     }
   },

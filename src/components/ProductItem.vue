@@ -14,7 +14,7 @@ const imgSrcset = computed((): string => {
   const imageName = props.product.image.substring(0, props.product.image.lastIndexOf('.')) || props.product.image;
   const imageExtension = props.product.image.substring(props.product.image.lastIndexOf('.') + 1);
 
-  return `${imageName}-1023w.${imageExtension} 1023w, ${imageName}-1024w.${imageExtension} 1024w`;
+  return `${imageName}@2.${imageExtension} 2x`;
 });
 </script>
 
@@ -23,14 +23,13 @@ const imgSrcset = computed((): string => {
     <div class="flex flex-col h-full justify-between">
       <div>
         <div
-          class="rounded-3xl w-full flex irems-center justify-center bg-right bg-yellow-gradient group-hover:bg-left bg-120% shadow-centered">
+          class="rounded-3xl w-full flex irems-center justify-center bg-right bg-yellow-gradient group-hover:bg-left bg-120% shadow-centered pt-1">
           <LazyImage
-            width="549"
-            height="713"
-            class="h-[220px] lg:h-[278px] w-auto group-hover:scale-105 transition-all"
+            width="187"
+            height="273"
+            class="h-[220px] lg:h-[273px] relative top-0.5 lg:top-1 w-auto group-hover:scale-103 transition-all"
             :alt="product.name"
             :srcset="imgSrcset"
-            :sizes="'(max-width: 1023px) 1023px, (min-width: 1024px) 1024px'"
             :src="`${product.image}`"
             fetchpriority="high" />
         </div>
